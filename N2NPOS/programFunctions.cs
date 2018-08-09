@@ -8,8 +8,12 @@ using System.Windows.Forms;
 
 namespace N2NPOS
 {
+    // This class contains functions required across the system.
+    // This means code does not have to be written out twice, three times, etc.
+
     class programFunctions
     {
+    
         public static void refreshUidBox(System.Windows.Forms.ComboBox cb, string connString)
         {
             // To refresh the Username UID box.
@@ -50,6 +54,49 @@ namespace N2NPOS
             // and clear the SQL command.
             myConn.Close();
             cmd.Dispose();
+        }
+
+        public static void startDevMode(string connString)
+        {
+            // This sets up an account for an example (developer) POS user.
+            // Then, it creates 20 stock items, of different prices and descriptions.
+            // This will not be included in the final release. Remove before final commit to github.
+
+            SqlConnection myConn = new SqlConnection();
+            myConn.ConnectionString = connString;
+            myConn.Open();
+
+            // Setup the SQL command, then execute the query
+            SqlCommand cmd = new SqlCommand("INSERT into [staff] ([staffUid], [password], [forename], [surname], [dob]) VALUES ('calvinearnshaw', 'dev', 'Calvin', 'Earnshaw', '01/01/2001')", myConn);
+            cmd.ExecuteNonQuery();
+
+            // Now ask for stock creation...
+            DialogResult msg;
+            msg = MessageBox.Show("Do you wish to create sample stock?", "N2NPOS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // If stock creation is to be used...
+            if (msg == DialogResult.Yes)
+            {
+                // ...then create the sample stock
+                int stockCount = 0;
+
+                while (stockCount < 20)
+                {
+                    // Repeat this process 20 times
+                    SqlCommand stkCmd = new SqlCommand("INSERT into [stock] ([ItemID], [ItemName], [ItemGroup], [ItemPrice]) VALUES ('" + stockCount.ToString() + "', 'Sample Item " + stockCount.ToString() + "', 'Group " + stockCount.ToString() + "', '" + stockCount.ToString("0.00") + "')", myConn);
+                    cmd.ExecuteNonQuery();
+                    stockCount = stockCount + 1;
+                }
+            } else
+            {
+                // ...then don't create the sample stock
+            }
+
+            // Dev mode initialisation complete!
+            // Provide confirmation to user.
+
+            MessageBox.Show("Sign in with the following details:" + Environment.NewLine + Environment.NewLine +
+                "Username: calvinearnshaw" + Environment.NewLine + "Password: dev", "N2NPOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
