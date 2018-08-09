@@ -25,7 +25,28 @@ namespace N2NPOS
         {
             // On loading of the login screen, perform following operations...
             programFunctions.refreshUidBox(cbUsername, connString);
-
         }
+
+        private void lblApplicationName_Click(object sender, EventArgs e)
+        {
+            if (count == 10)
+            {
+                DialogResult msg;
+                msg = MessageBox.Show("Do you wish to start N2NPOS in developer mode?", "N2NPOS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (msg == DialogResult.Yes)
+                {
+                    programFunctions.startDevMode(connString);
+                }
+            } else
+            {
+                count = count + 1;
+            }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }   
     }
 }
