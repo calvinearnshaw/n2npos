@@ -98,5 +98,33 @@ namespace N2NPOS
             MessageBox.Show("Sign in with the following details:" + Environment.NewLine + Environment.NewLine +
                 "Username: calvinearnshaw" + Environment.NewLine + "Password: dev", "N2NPOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        public static bool verifyUserDetails(string username, string password, string connString)
+        {
+            // This verifies a user's details based on the information given.
+            // The details are checked against the posData database.
+            // This function will return either true or false, based on what
+            // the outcome of the verification process is.
+
+            SqlConnection myConn = new SqlConnection();
+            myConn.ConnectionString = connString;
+            myConn.Open();
+
+            // Setup the SQL command, then execute a data reader
+            SqlCommand cmd = new SqlCommand("SELECT * from [staff] WHERE [staffUid]='" + username + "' AND [password] ='" + password + "'", myConn);
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            // Check for rows based on the query above
+            // If the data reader finds a matching record...
+            if (dr.HasRows)
+            {
+                // ...then return true...
+                return true;
+            } else
+            {
+                // ...otherwise, return false.
+                return false;
+            }
+        }
     }
 }

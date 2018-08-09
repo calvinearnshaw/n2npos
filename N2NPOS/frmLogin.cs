@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 
 namespace N2NPOS
 {
+
     public partial class frmLogin : Form
     {
         int count = 0;
@@ -46,7 +47,14 @@ namespace N2NPOS
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            if (programFunctions.verifyUserDetails(cbUsername.Text, tbPassword.Text, connString))
+            {
+                frmMainScreen.ActiveForm.Show();
+                this.Close();
+            } else
+            {
+                MessageBox.Show("Invalid username/password!", "NNPOS", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }   
     }
 }
