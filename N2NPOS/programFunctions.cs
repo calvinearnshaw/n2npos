@@ -10,7 +10,7 @@ namespace N2NPOS
 {
     class programFunctions
     {
-        public void refreshUidBox(System.Windows.Forms.ComboBox cb, string connString)
+        public static void refreshUidBox(System.Windows.Forms.ComboBox cb, string connString)
         {
             // To refresh the Username UID box.
 
