@@ -16,5 +16,10 @@ namespace N2NPOS
         {
             InitializeComponent();
         }
+
+        private void frmMainScreen_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

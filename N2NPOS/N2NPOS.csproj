@@ -49,6 +49,15 @@
     <StartupObject>N2NPOS.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>D:\DOWNLOADS\metroframework-modern-ui-master\metro dll files\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>D:\DOWNLOADS\metroframework-modern-ui-master\metro dll files\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>D:\DOWNLOADS\metroframework-modern-ui-master\metro dll files\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -84,6 +93,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainScreen.resx">
+      <DependentUpon>frmMainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,6 +139,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>posData.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\stock.png" />
+    <None Include="Resources\staff.png" />
+    <None Include="Resources\setting.png" />
+    <None Include="Resources\SCHEDULE.png" />
+    <None Include="Resources\logoff.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\cash-register.png" />
+    <None Include="Resources\cash.png" />
     <None Include="Resources\splash.jpg" />
   </ItemGroup>
   <ItemGroup>

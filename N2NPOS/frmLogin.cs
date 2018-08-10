@@ -37,7 +37,7 @@ namespace N2NPOS
 
                 if (msg == DialogResult.Yes)
                 {
-                    programFunctions.startDevMode(connString);
+                    programFunctions.startDevMode(connString, ((Control)Owner));
                 }
             } else
             {

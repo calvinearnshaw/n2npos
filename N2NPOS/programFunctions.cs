@@ -56,7 +56,7 @@ namespace N2NPOS
             cmd.Dispose();
         }
 
-        public static void startDevMode(string connString)
+        public static void startDevMode(string connString, IWin32Window win)
         {
             // This sets up an account for an example (developer) POS user.
             // Then, it creates 20 stock items, of different prices and descriptions.
@@ -69,27 +69,28 @@ namespace N2NPOS
             // Setup the SQL command, then execute the query
             SqlCommand cmd = new SqlCommand("INSERT into [staff] ([staffUid], [password], [forename], [surname], [dob]) VALUES ('calvinearnshaw', 'dev', 'Calvin', 'Earnshaw', '01/01/2001')", myConn);
             cmd.ExecuteNonQuery();
+            cmd.Dispose();
 
             // Now ask for stock creation...
             DialogResult msg;
             msg = MessageBox.Show("Do you wish to create sample stock?", "N2NPOS", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            // If stock creation is to be used...
+            // If stock creation will commence...
             if (msg == DialogResult.Yes)
             {
-                // ...then create the sample stock
+                // ...then create the sample stock...
                 int stockCount = 0;
 
                 while (stockCount < 20)
                 {
-                    // Repeat this process 20 times
+                    // ... and repeat this process 20 times...
                     SqlCommand stkCmd = new SqlCommand("INSERT into [stock] ([ItemID], [ItemName], [ItemGroup], [ItemPrice]) VALUES ('" + stockCount.ToString() + "', 'Sample Item " + stockCount.ToString() + "', 'Group " + stockCount.ToString() + "', '" + stockCount.ToString("0.00") + "')", myConn);
-                    cmd.ExecuteNonQuery();
+                    stkCmd.ExecuteNonQuery();
                     stockCount = stockCount + 1;
                 }
             } else
             {
-                // ...then don't create the sample stock
+                // ...otherwise, don't create the sample stock
             }
 
             // Dev mode initialisation complete!
