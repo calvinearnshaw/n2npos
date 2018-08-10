@@ -38,6 +38,7 @@ namespace N2NPOS
                 if (msg == DialogResult.Yes)
                 {
                     programFunctions.startDevMode(connString, ((Control)Owner));
+                    programFunctions.refreshUidBox(cbUsername, connString);
                 }
             } else
             {
@@ -49,8 +50,8 @@ namespace N2NPOS
         {
             if (programFunctions.verifyUserDetails(cbUsername.Text, tbPassword.Text, connString))
             {
-                frmMainScreen.ActiveForm.Show();
-                this.Close();
+                new frmMainScreen().Show();
+                this.Hide();
             } else
             {
                 MessageBox.Show("Invalid username/password!", "NNPOS", MessageBoxButtons.OK, MessageBoxIcon.Stop);

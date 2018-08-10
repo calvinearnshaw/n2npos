@@ -40,7 +40,7 @@ namespace N2NPOS
                 while (dr.Read())
                 {
                     // ...then add said items to the username combobox...
-                    cb.Items.Add(dr.GetString(1));
+                    cb.Items.Add(dr.GetString(0));
                 }
             }
             else
