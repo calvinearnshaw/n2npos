@@ -25,5 +25,10 @@ namespace N2NPOS
             // Get forename details based on passed in data from frmLogin.
             lbCurrentUser.Text = "Hi, " + currentUser;
         }
+
+        private void tileSell_Click(object sender, EventArgs e)
+        {
+            new frmSell().Show();
+        }
     }
 }

@@ -37,8 +37,6 @@
             this.buildLbl = new System.Windows.Forms.Label();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.forename = new System.Windows.Forms.Label();
-            this.surname = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +100,6 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.buildLbl);
             this.panel1.Controls.Add(this.btnHelp);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.lblApplicationName);
@@ -119,15 +116,16 @@
             // 
             // buildLbl
             // 
+            this.buildLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buildLbl.AutoSize = true;
             this.buildLbl.BackColor = System.Drawing.Color.Transparent;
             this.buildLbl.Font = new System.Drawing.Font("Vodafone", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buildLbl.ForeColor = System.Drawing.Color.White;
-            this.buildLbl.Location = new System.Drawing.Point(324, 272);
+            this.buildLbl.Location = new System.Drawing.Point(12, 742);
             this.buildLbl.Name = "buildLbl";
-            this.buildLbl.Size = new System.Drawing.Size(49, 17);
+            this.buildLbl.Size = new System.Drawing.Size(262, 17);
             this.buildLbl.TabIndex = 7;
-            this.buildLbl.Text = "Build 7";
+            this.buildLbl.Text = "Build 8 - Alpha software, not for public use.";
             // 
             // btnHelp
             // 
@@ -154,26 +152,6 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // forename
-            // 
-            this.forename.AutoSize = true;
-            this.forename.Location = new System.Drawing.Point(16, 21);
-            this.forename.Name = "forename";
-            this.forename.Size = new System.Drawing.Size(51, 13);
-            this.forename.TabIndex = 6;
-            this.forename.Text = "forename";
-            this.forename.Visible = false;
-            // 
-            // surname
-            // 
-            this.surname.AutoSize = true;
-            this.surname.Location = new System.Drawing.Point(16, 49);
-            this.surname.Name = "surname";
-            this.surname.Size = new System.Drawing.Size(47, 13);
-            this.surname.TabIndex = 7;
-            this.surname.Text = "surname";
-            this.surname.Visible = false;
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,9 +159,9 @@
             this.BackgroundImage = global::N2NPOS.Properties.Resources.splash;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 768);
-            this.Controls.Add(this.surname);
-            this.Controls.Add(this.forename);
+            this.Controls.Add(this.buildLbl);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.Text = "Form1";
@@ -206,8 +184,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnLogin;
-        public System.Windows.Forms.Label forename;
-        public System.Windows.Forms.Label surname;
         private System.Windows.Forms.Label buildLbl;
     }
 }

@@ -49,6 +49,18 @@
     <StartupObject>N2NPOS.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Design">
+      <HintPath>..\..\..\Own Projects (VB NET)\NNPOS\DotNetBar (dependency)\DevComponents.DotNetBar.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\..\..\Own Projects (VB NET)\NNPOS\DotNetBar (dependency)\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation">
+      <HintPath>..\..\..\Own Projects (VB NET)\NNPOS\DotNetBar (dependency)\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation.Design">
+      <HintPath>..\..\..\Own Projects (VB NET)\NNPOS\DotNetBar (dependency)\DevComponents.Instrumentation.Design.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework">
       <HintPath>D:\DOWNLOADS\metroframework-modern-ui-master\metro dll files\MetroFramework.dll</HintPath>
     </Reference>
@@ -71,6 +83,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBugReporting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBugReporting.Designer.cs">
+      <DependentUpon>frmBugReporting.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +101,12 @@
     <Compile Include="frmMainScreen.Designer.cs">
       <DependentUpon>frmMainScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSell.Designer.cs">
+      <DependentUpon>frmSell.cs</DependentUpon>
+    </Compile>
     <Compile Include="posDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,12 +114,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="programFunctions.cs" />
+    <Compile Include="progressLoader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="progressLoader.Designer.cs">
+      <DependentUpon>progressLoader.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBugReporting.resx">
+      <DependentUpon>frmBugReporting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainScreen.resx">
       <DependentUpon>frmMainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSell.resx">
+      <DependentUpon>frmSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="progressLoader.resx">
+      <DependentUpon>progressLoader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,6 +178,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>posData.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\bug.png" />
     <None Include="Resources\help.png" />
     <None Include="Resources\cash.png" />
     <None Include="Resources\stock.png" />

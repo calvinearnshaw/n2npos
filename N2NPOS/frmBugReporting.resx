@@ -117,35 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="logoff" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logoff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="label8.Text" xml:space="preserve">
+    <value>N2NPOS has caught an exception and can no longer continue as a result.
+
+As a result of this error, any sales, transactions, or other operations being carried out will not be completed.
+
+You are recommended to fill out a bug report for this error, so that we can try and solve the problem for you.
+
+Otherwise, click Close to restart N2NPOS.</value>
   </data>
-  <data name="staff" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\staff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\setting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rota" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="splash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\splash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bug" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Bug Reporting allows us to gather a better understanding of how an issue occured within your system, therefore allowing us to fix it faster for you.
+
+Some data will be collected from this PC, however, none of said data will be personally identifiable to you. You will have an opportunity to review the data that will be sent to Earnshaw Software. You will also have the option to remove certain aspects of the report.
+
+When you're ready, click Next.</value>
   </data>
 </root>
