@@ -34,11 +34,11 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buildLbl = new System.Windows.Forms.Label();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.forename = new System.Windows.Forms.Label();
             this.surname = new System.Windows.Forms.Label();
-            this.buildLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +100,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.buildLbl);
             this.panel1.Controls.Add(this.btnHelp);
@@ -110,9 +111,23 @@
             this.panel1.Controls.Add(this.lblUsername);
             this.panel1.Controls.Add(this.tbPassword);
             this.panel1.Location = new System.Drawing.Point(158, 242);
+            this.panel1.MaximumSize = new System.Drawing.Size(700, 300);
+            this.panel1.MinimumSize = new System.Drawing.Size(700, 300);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(700, 300);
             this.panel1.TabIndex = 5;
+            // 
+            // buildLbl
+            // 
+            this.buildLbl.AutoSize = true;
+            this.buildLbl.BackColor = System.Drawing.Color.Transparent;
+            this.buildLbl.Font = new System.Drawing.Font("Vodafone", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buildLbl.ForeColor = System.Drawing.Color.White;
+            this.buildLbl.Location = new System.Drawing.Point(324, 272);
+            this.buildLbl.Name = "buildLbl";
+            this.buildLbl.Size = new System.Drawing.Size(49, 17);
+            this.buildLbl.TabIndex = 7;
+            this.buildLbl.Text = "Build 7";
             // 
             // btnHelp
             // 
@@ -158,18 +173,6 @@
             this.surname.TabIndex = 7;
             this.surname.Text = "surname";
             this.surname.Visible = false;
-            // 
-            // buildLbl
-            // 
-            this.buildLbl.AutoSize = true;
-            this.buildLbl.BackColor = System.Drawing.Color.Transparent;
-            this.buildLbl.Font = new System.Drawing.Font("Vodafone", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buildLbl.ForeColor = System.Drawing.Color.White;
-            this.buildLbl.Location = new System.Drawing.Point(324, 272);
-            this.buildLbl.Name = "buildLbl";
-            this.buildLbl.Size = new System.Drawing.Size(49, 17);
-            this.buildLbl.TabIndex = 7;
-            this.buildLbl.Text = "Build 6";
             // 
             // frmLogin
             // 

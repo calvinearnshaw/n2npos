@@ -127,5 +127,64 @@ namespace N2NPOS
                 return false;
             }
         }
+
+        public static string returnUserDetails(string info, string username, string password, string connString)
+        {
+            // This provides details about a selected user based on the
+            // information given programmatically.
+            // Program must provide username/password to the account in order to
+            // access its information.
+            // This allows for security and compliance with the GDPR in terms of
+            // security.
+            // This function will return a string of the information required
+            // by the program.
+
+            SqlConnection myConn = new SqlConnection();
+            myConn.ConnectionString = connString;
+            myConn.Open();
+
+            // Setup the SQL command, then execute a data reader
+            SqlCommand cmd = new SqlCommand("SELECT * from [staff] WHERE [staffUid]='" + username + "' AND [password] ='" + password + "'", myConn);
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            // Check for rows based on the query above
+            // If the data reader finds a matching record...
+            if (dr.HasRows)
+            {
+                // ...then get its information
+                while (dr.Read())
+                {
+                    if (info == "staffUid")
+                    {
+                        return dr.GetString(0);
+                    }
+                    else if (info == "password")
+                    {
+                        return dr.GetString(1);
+                    }
+                    else if (info == "forename")
+                    {
+                        return dr.GetString(2);
+                    }
+                    else if (info == "surname")
+                    {
+                        return dr.GetString(3);
+                    }
+                    else if (info == "dob")
+                    {
+                        return dr.GetString(4);
+                    }
+                    else
+                    {
+                        // Function should never reach this point as this function is invoked
+                        // programmatically.
+                        return "";
+                    }
+                }
+            }
+            // Function should never reach this point as this function is invoked
+            // programmatically.
+            return "";
+        }
     }
 }

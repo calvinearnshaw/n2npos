@@ -73,16 +73,6 @@ namespace N2NPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cash_register {
-            get {
-                object obj = ResourceManager.GetObject("cash-register", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap help {
             get {
                 object obj = ResourceManager.GetObject("help", resourceCulture);
@@ -103,9 +93,19 @@ namespace N2NPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SCHEDULE {
+        internal static System.Drawing.Bitmap pos {
             get {
-                object obj = ResourceManager.GetObject("SCHEDULE", resourceCulture);
+                object obj = ResourceManager.GetObject("pos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rota {
+            get {
+                object obj = ResourceManager.GetObject("rota", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

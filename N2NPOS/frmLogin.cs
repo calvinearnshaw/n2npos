@@ -50,6 +50,7 @@ namespace N2NPOS
         {
             if (programFunctions.verifyUserDetails(cbUsername.Text, tbPassword.Text, connString))
             {
+                frmMainScreen.currentUser = programFunctions.returnUserDetails("forename", cbUsername.Text, tbPassword.Text, connString);
                 new frmMainScreen().Show();
                 this.Hide();
             } else

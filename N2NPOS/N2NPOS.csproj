@@ -139,14 +139,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>posData.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\help.png" />
+    <None Include="Resources\cash.png" />
     <None Include="Resources\stock.png" />
     <None Include="Resources\staff.png" />
     <None Include="Resources\setting.png" />
-    <None Include="Resources\SCHEDULE.png" />
+    <None Include="Resources\rota.png" />
+    <None Include="Resources\pos.png" />
     <None Include="Resources\logoff.png" />
-    <None Include="Resources\help.png" />
-    <None Include="Resources\cash-register.png" />
-    <None Include="Resources\cash.png" />
     <None Include="Resources\splash.jpg" />
   </ItemGroup>
   <ItemGroup>
