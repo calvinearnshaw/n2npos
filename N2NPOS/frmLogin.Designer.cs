@@ -34,9 +34,9 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buildLbl = new System.Windows.Forms.Label();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.buildLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,19 +114,6 @@
             this.panel1.Size = new System.Drawing.Size(700, 300);
             this.panel1.TabIndex = 5;
             // 
-            // buildLbl
-            // 
-            this.buildLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buildLbl.AutoSize = true;
-            this.buildLbl.BackColor = System.Drawing.Color.Transparent;
-            this.buildLbl.Font = new System.Drawing.Font("Vodafone", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buildLbl.ForeColor = System.Drawing.Color.White;
-            this.buildLbl.Location = new System.Drawing.Point(12, 742);
-            this.buildLbl.Name = "buildLbl";
-            this.buildLbl.Size = new System.Drawing.Size(262, 17);
-            this.buildLbl.TabIndex = 7;
-            this.buildLbl.Text = "Build 8 - Alpha software, not for public use.";
-            // 
             // btnHelp
             // 
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -151,6 +138,19 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // buildLbl
+            // 
+            this.buildLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buildLbl.AutoSize = true;
+            this.buildLbl.BackColor = System.Drawing.Color.Transparent;
+            this.buildLbl.Font = new System.Drawing.Font("Vodafone", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buildLbl.ForeColor = System.Drawing.Color.White;
+            this.buildLbl.Location = new System.Drawing.Point(12, 742);
+            this.buildLbl.Name = "buildLbl";
+            this.buildLbl.Size = new System.Drawing.Size(262, 17);
+            this.buildLbl.TabIndex = 7;
+            this.buildLbl.Text = "Build 9 - Alpha software, not for public use.";
             // 
             // frmLogin
             // 

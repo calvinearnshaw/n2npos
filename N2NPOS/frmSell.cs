@@ -66,18 +66,71 @@ namespace N2NPOS
         {
             if (stockListView.SelectedItems.Count != 0)
             {
-                orderListBox.Items.Add(stockListView.FocusedItem.Text);
-                string[] words = stockListView.FocusedItem.Text.Split('£');
+                orderListBox.Items.Add((string)stockListView.SelectedItems[0].Text);
+                string[] words = stockListView.SelectedItems[0].Text.Split('£');
                 string item = words[0];
                 double price = Convert.ToDouble(words[1]);
                 moneyTotal = moneyTotal + price;
-                // customer second display code goes in here
+                lblSubtotal.Text = "£" + moneyTotal.ToString("0.00");
+                // << customer second display code goes in here >>
             }
         }
 
-        private void stockListView_DoubleClick(object sender, EventArgs e)
+        private void orderListBox_DoubleClick(object sender, EventArgs e)
+        {
+            DialogResult msg;
+            msg = MessageBox.Show("Remove " + orderListBox.SelectedItem.ToString() + "?", "Confirm Removal", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (msg == DialogResult.Yes)
+            {
+                string[] words = orderListBox.SelectedItem.ToString().Split('£');
+                string item = words[0];
+                double price = Convert.ToDouble(words[1]);
+
+                moneyTotal = moneyTotal - price;
+
+                lblSubtotal.Text = "£" + moneyTotal.ToString("0.00");
+                // <<customer second display code>>
+                orderListBox.Items.Remove(orderListBox.SelectedItem);
+            }
+        }
+
+        private void btnClearItems_Click(object sender, EventArgs e)
+        {
+            DialogResult msg;
+            msg = MessageBox.Show("Clear items from order?" + Environment.NewLine + "This cannot be undone.", "Confirm Clearance", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (msg == DialogResult.Yes)
+            {
+                moneyTotal = 0.00;
+                lblSubtotal.Text = "£0.00";
+                orderListBox.Items.Clear();
+                // << customer second disp code >> //
+                MessageBox.Show("Items cleared.", "N2NPOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnCancelSale_Click(object sender, EventArgs e)
+        {
+            DialogResult msg;
+            msg = MessageBox.Show("Are you sure you want to cancel the sale?" + Environment.NewLine + "This cannot be undone.", "Confirm Sale Cancellation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (msg == DialogResult.Yes)
+            {
+                moneyTotal = 0.00;
+                lblSubtotal.Text = "£0.00";
+                orderListBox.Items.Clear();
+                // << customer second disp code >> //
+                MessageBox.Show("Sale cancelled.", "N2NPOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+        }
+
+        private void btnCompleteSale_Click(object sender, EventArgs e)
         {
 
         }
+
+        
     }
 }
