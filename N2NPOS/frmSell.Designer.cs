@@ -163,7 +163,7 @@
             // stockListView
             // 
             this.stockListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(55)))), ((int)(((byte)(138)))));
-            this.stockListView.Font = new System.Drawing.Font("Vodafone", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stockListView.Font = new System.Drawing.Font("Vodafone", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stockListView.ForeColor = System.Drawing.Color.White;
             this.stockListView.Location = new System.Drawing.Point(236, 172);
             this.stockListView.Name = "stockListView";
@@ -173,7 +173,7 @@
             this.stockListView.UseCompatibleStateImageBehavior = false;
             this.stockListView.View = System.Windows.Forms.View.Tile;
             this.stockListView.Visible = false;
-            this.Click += new System.EventHandler(this.stockListView_Click);
+            this.stockListView.SelectedIndexChanged += new System.EventHandler(this.stockListView_SelectedIndexChanged);
             // 
             // frmSell
             // 
@@ -189,6 +189,7 @@
             this.Text = "frmSell";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmSell_Load);
+            this.Click += new System.EventHandler(this.stockListView_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

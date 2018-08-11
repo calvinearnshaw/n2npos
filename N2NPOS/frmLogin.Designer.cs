@@ -148,9 +148,9 @@
             this.buildLbl.ForeColor = System.Drawing.Color.White;
             this.buildLbl.Location = new System.Drawing.Point(12, 742);
             this.buildLbl.Name = "buildLbl";
-            this.buildLbl.Size = new System.Drawing.Size(262, 17);
+            this.buildLbl.Size = new System.Drawing.Size(270, 17);
             this.buildLbl.TabIndex = 7;
-            this.buildLbl.Text = "Build 9 - Alpha software, not for public use.";
+            this.buildLbl.Text = "Build 10 - Alpha software, not for public use.";
             // 
             // frmLogin
             // 

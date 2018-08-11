@@ -12,9 +12,22 @@ namespace N2NPOS
 {
     public partial class frmBugReporting : Form
     {
+        // Define class wide variables
+        public string exceptionText;
+        
         public frmBugReporting()
         {
             InitializeComponent();
+        }
+
+        private void frmBugReporting_Load(object sender, EventArgs e)
+        {
+            lblExceptionTxt.Text = "Error given by N2NPOS:" + Environment.NewLine + exceptionText;
+        }
+
+        public void prepareCrashReport()
+        {
+            
         }
     }
 }

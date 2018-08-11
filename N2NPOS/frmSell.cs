@@ -64,9 +64,9 @@ namespace N2NPOS
 
         private void stockListView_Click(object sender, EventArgs e)
         {
-            if (stockListView.SelectedItems.Count != 0)
+            if (stockListView.SelectedItems.Count > 0)
             {
-                orderListBox.Items.Add((string)stockListView.SelectedItems[0].Text);
+                orderListBox.Items.Add(stockListView.SelectedItems[0].Text);
                 string[] words = stockListView.SelectedItems[0].Text.Split('£');
                 string item = words[0];
                 double price = Convert.ToDouble(words[1]);
@@ -78,21 +78,27 @@ namespace N2NPOS
 
         private void orderListBox_DoubleClick(object sender, EventArgs e)
         {
-            DialogResult msg;
-            msg = MessageBox.Show("Remove " + orderListBox.SelectedItem.ToString() + "?", "Confirm Removal", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (msg == DialogResult.Yes)
+            try
             {
-                string[] words = orderListBox.SelectedItem.ToString().Split('£');
-                string item = words[0];
-                double price = Convert.ToDouble(words[1]);
+                DialogResult msg;
+                msg = MessageBox.Show("Remove " + orderListBox.SelectedItem.ToString() + "?", "Confirm Removal", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                moneyTotal = moneyTotal - price;
+                if (msg == DialogResult.Yes)
+                {
+                    string[] words = orderListBox.SelectedItem.ToString().Split('£');
+                    string item = words[0];
+                    double price = Convert.ToDouble(words[1]);
 
-                lblSubtotal.Text = "£" + moneyTotal.ToString("0.00");
-                // <<customer second display code>>
-                orderListBox.Items.Remove(orderListBox.SelectedItem);
-            }
+                    moneyTotal = moneyTotal - price;
+
+                    lblSubtotal.Text = "£" + moneyTotal.ToString("0.00");
+                    // <<customer second display code>>
+                    orderListBox.Items.Remove(orderListBox.SelectedItem);
+                }
+            } catch (Exception ex)
+            {
+
+            }      
         }
 
         private void btnClearItems_Click(object sender, EventArgs e)
@@ -128,9 +134,21 @@ namespace N2NPOS
 
         private void btnCompleteSale_Click(object sender, EventArgs e)
         {
+            DialogResult msg;
+            msg = MessageBox.Show("Sale statistics:" + Environment.NewLine + Environment.NewLine + "Items in basket: " + orderListBox.Items.Count.ToString() +
+                Environment.NewLine + "Subtotal: £" + moneyTotal.ToString("0.00") + Environment.NewLine + Environment.NewLine + "Are you sure you want to complete the sale?",
+                "Confirm Sale Completion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if (msg == DialogResult.Yes)
+            {
+                frmSellComplete.subtotal = moneyTotal;
+                new frmSellComplete().Show();
+            }
         }
 
-        
+        private void stockListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

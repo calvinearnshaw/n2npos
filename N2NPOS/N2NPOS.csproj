@@ -107,6 +107,12 @@
     <Compile Include="frmSell.Designer.cs">
       <DependentUpon>frmSell.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSellComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSellComplete.Designer.cs">
+      <DependentUpon>frmSellComplete.cs</DependentUpon>
+    </Compile>
     <Compile Include="posDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSell.resx">
       <DependentUpon>frmSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSellComplete.resx">
+      <DependentUpon>frmSellComplete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="progressLoader.resx">
       <DependentUpon>progressLoader.cs</DependentUpon>
