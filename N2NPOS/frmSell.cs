@@ -21,6 +21,8 @@ namespace N2NPOS
 
         double moneyTotal = 0.00;
 
+        frmSellComplete.ControlAccessibleObject control;
+
         public frmSell()
         {
             InitializeComponent();
@@ -143,6 +145,7 @@ namespace N2NPOS
             {
                 frmSellComplete.subtotal = moneyTotal;
                 new frmSellComplete().Show();
+                
             }
         }
 
