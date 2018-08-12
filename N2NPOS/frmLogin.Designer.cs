@@ -150,7 +150,7 @@
             this.buildLbl.Name = "buildLbl";
             this.buildLbl.Size = new System.Drawing.Size(270, 17);
             this.buildLbl.TabIndex = 7;
-            this.buildLbl.Text = "Build 10 - Alpha software, not for public use.";
+            this.buildLbl.Text = "Build 11 - Alpha software, not for public use.";
             // 
             // frmLogin
             // 

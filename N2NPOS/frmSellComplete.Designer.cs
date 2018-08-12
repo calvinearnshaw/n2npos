@@ -30,10 +30,12 @@
         {
             this.lblInstructions = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblTendered = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             this.lblAmountDue = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTendered = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn1 = new System.Windows.Forms.Button();
@@ -47,15 +49,16 @@
             this.btn7 = new System.Windows.Forms.Button();
             this.btnPeriod = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.rtbReceipt = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblInstructions
             // 
+            this.lblInstructions.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblInstructions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblInstructions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblInstructions.Font = new System.Drawing.Font("Vodafone", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInstructions.ForeColor = System.Drawing.Color.White;
             this.lblInstructions.Location = new System.Drawing.Point(0, 0);
@@ -67,6 +70,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnNext);
             this.panel1.Controls.Add(this.lblAmountDue);
@@ -78,6 +82,45 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1024, 100);
             this.panel1.TabIndex = 1;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(55)))), ((int)(((byte)(138)))));
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Vodafone", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(685, 0);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(150, 96);
+            this.btnCancel.TabIndex = 5;
+            this.btnCancel.Text = "Cancel Sale";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(55)))), ((int)(((byte)(138)))));
+            this.btnNext.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Vodafone", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Location = new System.Drawing.Point(835, 0);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(185, 96);
+            this.btnNext.TabIndex = 4;
+            this.btnNext.Text = "Continue Sale";
+            this.btnNext.UseVisualStyleBackColor = false;
+            // 
+            // lblAmountDue
+            // 
+            this.lblAmountDue.AutoSize = true;
+            this.lblAmountDue.Font = new System.Drawing.Font("Vodafone", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmountDue.ForeColor = System.Drawing.Color.White;
+            this.lblAmountDue.Location = new System.Drawing.Point(230, 57);
+            this.lblAmountDue.Name = "lblAmountDue";
+            this.lblAmountDue.Size = new System.Drawing.Size(85, 35);
+            this.lblAmountDue.TabIndex = 3;
+            this.lblAmountDue.Text = "£0.00";
             // 
             // label2
             // 
@@ -91,17 +134,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Amount tendered:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Vodafone", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 30);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Amount due:";
-            // 
             // lblTendered
             // 
             this.lblTendered.AutoSize = true;
@@ -113,16 +145,16 @@
             this.lblTendered.TabIndex = 2;
             this.lblTendered.Text = "£0.00";
             // 
-            // lblAmountDue
+            // label3
             // 
-            this.lblAmountDue.AutoSize = true;
-            this.lblAmountDue.Font = new System.Drawing.Font("Vodafone", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmountDue.ForeColor = System.Drawing.Color.White;
-            this.lblAmountDue.Location = new System.Drawing.Point(230, 57);
-            this.lblAmountDue.Name = "lblAmountDue";
-            this.lblAmountDue.Size = new System.Drawing.Size(85, 35);
-            this.lblAmountDue.TabIndex = 3;
-            this.lblAmountDue.Text = "£0.00";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Vodafone", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(12, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(162, 30);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Amount due:";
             // 
             // textBox1
             // 
@@ -131,7 +163,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Vodafone", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(369, 153);
+            this.textBox1.Location = new System.Drawing.Point(369, 217);
             this.textBox1.MaximumSize = new System.Drawing.Size(321, 50);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(227, 50);
@@ -143,7 +175,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Vodafone", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(333, 153);
+            this.label4.Location = new System.Drawing.Point(333, 217);
             this.label4.MaximumSize = new System.Drawing.Size(48, 54);
             this.label4.MinimumSize = new System.Drawing.Size(48, 54);
             this.label4.Name = "label4";
@@ -158,7 +190,7 @@
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn1.Font = new System.Drawing.Font("Vodafone", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.ForeColor = System.Drawing.Color.White;
-            this.btn1.Location = new System.Drawing.Point(414, 209);
+            this.btn1.Location = new System.Drawing.Point(414, 273);
             this.btn1.MaximumSize = new System.Drawing.Size(70, 70);
             this.btn1.MinimumSize = new System.Drawing.Size(70, 70);
             this.btn1.Name = "btn1";
@@ -174,7 +206,7 @@
             this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn2.Font = new System.Drawing.Font("Vodafone", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2.ForeColor = System.Drawing.Color.White;
-            this.btn2.Location = new System.Drawing.Point(490, 209);
+            this.btn2.Location = new System.Drawing.Point(490, 273);
             this.btn2.MaximumSize = new System.Drawing.Size(70, 70);
             this.btn2.MinimumSize = new System.Drawing.Size(70, 70);
             this.btn2.Name = "btn2";
@@ -190,7 +222,7 @@
             this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn3.Font = new System.Drawing.Font("Vodafone", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3.ForeColor = System.Drawing.Color.White;
-            this.btn3.Location = new System.Drawing.Point(566, 209);
+            this.btn3.Location = new System.Drawing.Point(566, 273);
             this.btn3.MaximumSize = new System.Drawing.Size(70, 70);
             this.btn3.MinimumSize = new System.Drawing.Size(70, 70);
             this.btn3.Name = "btn3";
@@ -206,7 +238,7 @@
             this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn6.Font = new System.Drawing.Font("Vodafone", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn6.ForeColor = System.Drawing.Color.White;
-            this.btn6.Location = new System.Drawing.Point(566, 285);
+            this.btn6.Location = new System.Drawing.Point(566, 349);
             this.btn6.MaximumSize = new System.Drawing.Size(70, 70);
             this.btn6.MinimumSize = new System.Drawing.Size(70, 70);
             this.btn6.Name = "btn6";
@@ -222,7 +254,7 @@
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5.Font = new System.Drawing.Font("Vodafone", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5.ForeColor = System.Drawing.Color.White;
-            this.btn5.Location = new System.Drawing.Point(490, 285);
+            this.btn5.Location = new System.Drawing.Point(490, 349);
             this.btn5.MaximumSize = new System.Drawing.Size(70, 70);
             this.btn5.MinimumSize = new System.Drawing.Size(70, 70);
             this.btn5.Name = "btn5";
@@ -238,7 +270,7 @@
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4.Font = new System.Drawing.Font("Vodafone", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4.ForeColor = System.Drawing.Color.White;
-            this.btn4.Location = new System.Drawing.Point(414, 285);
+            this.btn4.Location = new System.Drawing.Point(414, 349);
             this.btn4.MaximumSize = new System.Drawing.Size(70, 70);
             this.btn4.MinimumSize = new System.Drawing.Size(70, 70);
             this.btn4.Name = "btn4";
@@ -254,7 +286,7 @@
             this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn9.Font = new System.Drawing.Font("Vodafone", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn9.ForeColor = System.Drawing.Color.White;
-            this.btn9.Location = new System.Drawing.Point(566, 361);
+            this.btn9.Location = new System.Drawing.Point(566, 425);
             this.btn9.MaximumSize = new System.Drawing.Size(70, 70);
             this.btn9.MinimumSize = new System.Drawing.Size(70, 70);
             this.btn9.Name = "btn9";
@@ -270,7 +302,7 @@
             this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn8.Font = new System.Drawing.Font("Vodafone", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn8.ForeColor = System.Drawing.Color.White;
-            this.btn8.Location = new System.Drawing.Point(490, 361);
+            this.btn8.Location = new System.Drawing.Point(490, 425);
             this.btn8.MaximumSize = new System.Drawing.Size(70, 70);
             this.btn8.MinimumSize = new System.Drawing.Size(70, 70);
             this.btn8.Name = "btn8";
@@ -286,7 +318,7 @@
             this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn7.Font = new System.Drawing.Font("Vodafone", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn7.ForeColor = System.Drawing.Color.White;
-            this.btn7.Location = new System.Drawing.Point(414, 361);
+            this.btn7.Location = new System.Drawing.Point(414, 425);
             this.btn7.MaximumSize = new System.Drawing.Size(70, 70);
             this.btn7.MinimumSize = new System.Drawing.Size(70, 70);
             this.btn7.Name = "btn7";
@@ -302,7 +334,7 @@
             this.btnPeriod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPeriod.Font = new System.Drawing.Font("Vodafone", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPeriod.ForeColor = System.Drawing.Color.White;
-            this.btnPeriod.Location = new System.Drawing.Point(414, 437);
+            this.btnPeriod.Location = new System.Drawing.Point(414, 501);
             this.btnPeriod.MaximumSize = new System.Drawing.Size(70, 70);
             this.btnPeriod.MinimumSize = new System.Drawing.Size(70, 70);
             this.btnPeriod.Name = "btnPeriod";
@@ -318,7 +350,7 @@
             this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn0.Font = new System.Drawing.Font("Vodafone", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn0.ForeColor = System.Drawing.Color.White;
-            this.btn0.Location = new System.Drawing.Point(490, 437);
+            this.btn0.Location = new System.Drawing.Point(490, 501);
             this.btn0.MaximumSize = new System.Drawing.Size(146, 70);
             this.btn0.MinimumSize = new System.Drawing.Size(146, 70);
             this.btn0.Name = "btn0";
@@ -327,46 +359,33 @@
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = false;
             // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(55)))), ((int)(((byte)(138)))));
-            this.btnNext.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Vodafone", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(839, 0);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(185, 100);
-            this.btnNext.TabIndex = 4;
-            this.btnNext.Text = "Continue Sale";
-            this.btnNext.UseVisualStyleBackColor = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(55)))), ((int)(((byte)(138)))));
-            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Vodafone", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(689, 0);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(150, 100);
-            this.btnCancel.TabIndex = 5;
-            this.btnCancel.Text = "Cancel Sale";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            // 
             // btnClear
             // 
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(55)))), ((int)(((byte)(138)))));
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Vodafone", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(602, 153);
+            this.btnClear.Location = new System.Drawing.Point(602, 217);
+            this.btnClear.MaximumSize = new System.Drawing.Size(93, 50);
+            this.btnClear.MinimumSize = new System.Drawing.Size(93, 50);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(93, 50);
             this.btnClear.TabIndex = 20;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            // 
+            // rtbReceipt
+            // 
+            this.rtbReceipt.BackColor = System.Drawing.Color.Silver;
+            this.rtbReceipt.Dock = System.Windows.Forms.DockStyle.Left;
+            this.rtbReceipt.Font = new System.Drawing.Font("Merchant Copy Doublesize", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbReceipt.Location = new System.Drawing.Point(0, 150);
+            this.rtbReceipt.Name = "rtbReceipt";
+            this.rtbReceipt.Size = new System.Drawing.Size(250, 518);
+            this.rtbReceipt.TabIndex = 21;
+            this.rtbReceipt.Text = "rtbReceipt\n\nThe receipt for the purchase goes in here, and will be used when offe" +
+    "red to print at the end.";
             // 
             // frmSellComplete
             // 
@@ -374,6 +393,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(55)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.Controls.Add(this.rtbReceipt);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.btnPeriod);
@@ -426,5 +446,6 @@
         private System.Windows.Forms.Button btnPeriod;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.RichTextBox rtbReceipt;
     }
 }
